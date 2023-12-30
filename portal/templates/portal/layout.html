@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Nextbook - {% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" width="device-width" initial-scale="1">
+    <link rel="stylesheet" href="{% url 'portal/css/layout.css' %}">
+    {% block stylesheet %}{% endblock %}
+</head>
+
+<body>
+    {% block body %}
+    {% endblock %}
+
+    {% include 'portal/includes/footer.html' %}
+
+    <script src="{% url 'portal/js/layout.js' %}"></script>
+    {% block javascript %}{% endblock %}
+</body>
+
+</html>

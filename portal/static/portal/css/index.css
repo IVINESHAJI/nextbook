@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    /* background-image: url('images/joe-woods.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.signup-signin-container {
+    max-width: 100%;
+    margin-top: 60px;
+    padding: 20px 20px 20px 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup, .signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup {
+    border-right: 2px solid #797878e5;
+}
+
+.signin{
+    align-self: flex-start;
+}
+
+.left {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.right {
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+
+.signin-title, .signup-title {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-title h1, .signin-title h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #373232;
+    margin-bottom: 20px;
+}
+
+.signup-form, .signin-form {
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+}
+
+.form-input-field {
+    width: 100%;
+    min-width: 250px;
+    margin: 5px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-input-text {
+    width: 60%;
+    padding: 10px;
+    margin: 5px 0;
+    
+    border-right: 1px solid #393636;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 1px solid #393636;
+
+    border-radius: 1px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.form-input-text:hover {
+    background-color: #fafafa;
+}
+
+.form-input-text:focus {
+    background-color: #eaeaea;
+    outline: none;
+}
+
+.form-input-text::placeholder {
+    color: #1e1c1c;
+    font: 14px 'Roboto', sans-serif;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    color: #fff;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn {
+    width: auto;
+    padding: 10px;
+    margin: 5px 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: none;
+
+    font: 16px 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.submit-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #393636;
+    transform-origin: bottom right;
+    transition: transform 0.15s cubic-bezier(0, 0, 1, 1);
+}
+
+.submit-btn:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.submit-btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#link {
+    width: auto;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 5px
+}
+
+#form-footer-text {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+
+@media screen and (max-width: 540px) {
+    .signup-signin-container {
+        max-width: 100%;
+
+        margin: 0px;
+
+        flex-direction: column-reverse;
+    }
+
+    .signup, .signin {
+        height: 80vh;
+        max-height: 90vh;
+        max-width: 100%;
+        border-right: none;
+    }
+
+    .signin {
+        align-self: center;
+    }
+
+    .signup {
+        margin-bottom: 40px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    #form-footer-text {
+        display: none;
+    }
+}

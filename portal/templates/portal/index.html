@@ -1,25 +1,76 @@
+{% load static %}
+
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Portal</title>
-    <link rel="stylesheet" href="/css/portal.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nextbook - Register</title>
+
+    <link rel="stylesheet" href="{% static 'portal/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/includes/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/includes/footer.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    <div id="wrapper">
-        <div id="header">
-            <h1>Portal</h1>
-        </div>
-        <div id="content">
-            <h2>Portal</h2>
-            <p>Portal</p>
-        </div>
-        <div id="footer">
-            <p>Portal</p>
-        </div>
-    </div>
-</body>
 
+    <!--include navbar from includes-->
+    {% include "portal/includes/navbar.html" %}
+    
+    <div class="signup-signin-container">
+        
+        <section class="signup left" id="signup">
+            <div class="signup-title">
+                <h1>Sign Up</h1>
+            </div>
+            <div class="signup-form">
+                <form action="register" method="POST">
+                    {% csrf_token %}
+                    <div class="form-input-field">
+                        <input class="form-input-text" type="username" name="username" id="username" placeholder="Enter your Username" required>
+                    </div>
+                    <div class="form-input-field">
+                        <input class="form-input-text" type="email" name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-input-field">
+                        <input class="form-input-text" type="password" name="password1" id="password1" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-input-field">
+                        <input class="form-input-text" type="password" name="password2" id="password2" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <p id="form-footer-text">Already have an account?<a href="{% url 'index' %}#signin" id="link">Login</a></p>
+        </section>
+        
+        
+        <section class="signin right" id="signin">
+            <div class="signin-title">
+                <h1>Sign In</h1>
+            </div>
+            <div class="signin-form">
+                <form action="login" method="POST">
+                    {% csrf_token %}
+                    <div class="form-input-field">
+                        <input class="form-input-text" type="text" name="username" id="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-input-field">
+                        <input class="form-input-text" type="password" name="password1" id="password1" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <p id="form-footer-text">Don't have an account?<a href="{% url 'index' %}#signup" id="link">Register</a></p>
+        </section>
+    </div>
+
+    {% include "portal/includes/footer.html" %}
+</body>
 </html>
