@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nextbook - Register</title>
 
+    <link rel="shortcut icon" href="{% static 'portal/css/images/logo.png' %}" type="image/x-icon">
+
     <link rel="stylesheet" href="{% static 'portal/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'portal/css/includes/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'portal/css/includes/footer.css' %}">
@@ -18,12 +20,14 @@
 
     <!--include navbar from includes-->
     {% include "portal/includes/navbar.html" %}
-
-    <div class="hero">
-        <div class="hero-text">
-            <p><span class="changing-hero"></span></p>
+    
+    <section id="login">
+        <div class="hero">
+            <div class="hero-text">
+                <p><span class="changing-hero"></span></p>
+            </div>
         </div>
-    </div>
+    </section>
     
     <div class="signup-signin-container">
         
@@ -57,7 +61,7 @@
                     </div>
                 </form>
             </div>
-            <p id="form-footer-text">Already have an account?<a href="{% url 'index' %}#signin" id="link">Login</a></p>
+            <p id="form-footer-text">Already have an account?<a href="{% url 'index' %}#login" id="link">Login</a></p>
         </section>
         
         
