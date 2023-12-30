@@ -93,8 +93,27 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
 }
+
+.password-input-container {
+    width: 100%;
+    position: relative;
+}
+
+#togglePassword, #toggleConfirmPassword, #toggleLoginPassword {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 5px;
+}
+
 
 .form-input-text {
     width: 60%;
@@ -109,6 +128,18 @@ body{
     border-radius: 1px;
     box-sizing: border-box;
     background-color: #ffffff;
+}
+
+.password-input-text {
+    width: 100%;
+}
+
+.password-input-container {
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 .form-input-text:hover {

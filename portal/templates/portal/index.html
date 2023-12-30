@@ -35,16 +35,22 @@
                 <form action="register" method="POST">
                     {% csrf_token %}
                     <div class="form-input-field">
-                        <input class="form-input-text" type="username" name="username" id="username" placeholder="Enter your Username" required>
+                        <input class="form-input-text" type="username" name="username" id="username" placeholder="Username" required>
                     </div>
                     <div class="form-input-field">
-                        <input class="form-input-text" type="email" name="email" id="email" placeholder="Enter your email" required>
+                        <input class="form-input-text" type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-input-field password-input-field">
+                        <div class="password-input-container">
+                            <input class="form-input-text password-input-text" type="password" name="password1" id="password1" placeholder="Password" required>
+                            <i class="fa fa-eye" id="togglePassword"></i>
+                        </div>
                     </div>
                     <div class="form-input-field">
-                        <input class="form-input-text" type="password" name="password1" id="password1" placeholder="Enter your password" required>
-                    </div>
-                    <div class="form-input-field">
-                        <input class="form-input-text" type="password" name="password2" id="password2" placeholder="Confirm your password" required>
+                        <div class="password-input-container">
+                            <input class="form-input-text password-input-text" type="password" name="password2" id="password2" placeholder="Confirm password" required>
+                            <i class="fa fa-eye" id="toggleConfirmPassword"></i>
+                        </div>
                     </div>
                     <div class="form-submit">
                         <button type="submit" class="submit-btn">Submit</button>
@@ -63,10 +69,13 @@
                 <form action="login" method="POST">
                     {% csrf_token %}
                     <div class="form-input-field">
-                        <input class="form-input-text" type="text" name="username" id="username" placeholder="Enter your username" required>
+                        <input class="form-input-text" type="text" name="username" id="username" placeholder="Username" required>
                     </div>
-                    <div class="form-input-field">
-                        <input class="form-input-text" type="password" name="password1" id="password1" placeholder="Enter your password" required>
+                    <div class="form-input-field password-input-field">
+                        <div class="password-input-container">
+                            <input class="form-input-text password-input-text" type="password" name="loginPassword" id="loginPassword" placeholder="Password" required>
+                            <i class="fa fa-eye" id="toggleLoginPassword"></i>
+                        </div>
                     </div>
                     <div class="form-submit">
                         <button type="submit" class="submit-btn">Submit</button>
