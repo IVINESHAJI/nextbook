@@ -9,9 +9,25 @@ body{
     overflow-x: hidden;
 }
 
+.hero{
+    width: 100%;
+    margin: 50px 0px 0px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #373232;
+}
+
 .signup-signin-container {
     max-width: 100%;
-    margin-top: 60px;
+    margin-top: 10px;
     padding: 20px 20px 20px 20px;
 
     display: flex;
@@ -177,23 +193,33 @@ body{
 
 
 @media screen and (max-width: 540px) {
+    .hero {
+        margin-top: 100px;
+    }
+
+    .hero-text {
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .signup-signin-container {
         max-width: 100%;
-
         margin: 0px;
-
         flex-direction: column-reverse;
     }
 
     .signup, .signin {
-        height: 80vh;
-        max-height: 90vh;
+        height: 60vh;
+        max-height: 70vh;
         max-width: 100%;
         border-right: none;
     }
 
     .signin {
         align-self: center;
+        margin-top: -50px;
     }
 
     .signup {

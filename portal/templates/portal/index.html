@@ -18,6 +18,12 @@
 
     <!--include navbar from includes-->
     {% include "portal/includes/navbar.html" %}
+
+    <div class="hero">
+        <div class="hero-text">
+            <p><span class="changing-hero"></span></p>
+        </div>
+    </div>
     
     <div class="signup-signin-container">
         
@@ -72,5 +78,8 @@
     </div>
 
     {% include "portal/includes/footer.html" %}
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="{% static 'portal/js/index.js' %}"></script>
 </body>
 </html>
