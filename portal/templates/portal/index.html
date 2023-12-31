@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nextbook - Register</title>
 
     <link rel="shortcut icon" href="{% static 'portal/css/images/logo.png' %}" type="image/x-icon">
@@ -35,14 +36,17 @@
             <div class="signup-title">
                 <h1>Sign Up</h1>
             </div>
+            
+            {{ message }}
+
             <div class="signup-form">
                 <form action="register" method="POST">
                     {% csrf_token %}
                     <div class="form-input-field">
-                        <input class="form-input-text" type="username" name="username" id="username" placeholder="Username" required>
+                        <input class="form-input-text" type="username" name="username" id="username" placeholder="Username" required autocomplete="True">
                     </div>
                     <div class="form-input-field">
-                        <input class="form-input-text" type="email" name="email" id="email" placeholder="Email" required>
+                        <input class="form-input-text" type="email" name="email" id="email" placeholder="Email" required autocomplete="True">
                     </div>
                     <div class="form-input-field password-input-field">
                         <div class="password-input-container">
@@ -70,14 +74,14 @@
                 <h1>Sign In</h1>
             </div>
             <div class="signin-form">
-                <form action="login" method="POST">
+                <form action="signin" method="POST">
                     {% csrf_token %}
                     <div class="form-input-field">
-                        <input class="form-input-text" type="text" name="username" id="username" placeholder="Username" required>
+                        <input class="form-input-text" type="text" name="loginUsername" id="loginUsername" placeholder="Username" required autocomplete="True">
                     </div>
                     <div class="form-input-field password-input-field">
                         <div class="password-input-container">
-                            <input class="form-input-text password-input-text" type="password" name="loginPassword" id="loginPassword" placeholder="Password" required>
+                            <input class="form-input-text password-input-text" type="password" name="loginPassword" id="loginPassword" placeholder="Password" required autocomplete="True">
                             <i class="fa fa-eye" id="toggleLoginPassword"></i>
                         </div>
                     </div>

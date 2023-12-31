@@ -5,19 +5,29 @@
 <html lang="en">
 <head>
     <title>Nextbook - {% block title %}{% endblock %}</title>
+    
     <meta charset="utf-8">
     <meta name="viewport" width="device-width" initial-scale="1">
-    <link rel="stylesheet" href="{% url 'portal/css/layout.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="{% static 'portal/css/images/logo.png' %}" type="image/x-icon">
+    
+    <link rel="stylesheet" href="{% static 'portal/css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/includes/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/includes/footer.css' %}">
+
     {% block stylesheet %}{% endblock %}
 </head>
 
 <body>
+    {% include 'portal/includes/navbar.html' %}
+
     {% block body %}
     {% endblock %}
 
     {% include 'portal/includes/footer.html' %}
 
-    <script src="{% url 'portal/js/layout.js' %}"></script>
+    <script src="{% static 'portal/js/layout.js' %}"></script>
     {% block javascript %}{% endblock %}
 </body>
 

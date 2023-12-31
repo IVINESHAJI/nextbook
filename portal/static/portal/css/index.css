@@ -2,7 +2,13 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
+
+/* change selection color */
+::selection {
+    background-color: #1b1a1a;
+    color: #ffffff;
+}
 
 body{
     background-image: url('images/background4.png');
@@ -82,7 +88,7 @@ body{
     font-size: 32px;
     font-weight: 700;
     color: #373232;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .signup-form, .signin-form {
@@ -199,12 +205,12 @@ body{
     transition: transform 0.15s cubic-bezier(0, 0, 1, 1);
 }
 
-.submit-btn:hover {
+.submit-btn:hover, .submit-btn:focus, .submit-btn:active {
     background-color: #f1f1f1;
     cursor: pointer;
 }
 
-.submit-btn:hover::after {
+.submit-btn:hover::after, .submit-btn:focus::after, .submit-btn:active::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }

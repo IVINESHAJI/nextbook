@@ -1,5 +1,6 @@
 nav{
     background-color: #ffffff;
+    margin-bottom: 50px;
 }
 
 .navbar {
@@ -10,6 +11,8 @@ nav{
     padding: 8px 10px;
     z-index: 1000;
     background-color: #ffffff;
+
+    margin-bottom: 50px ;
 }
 
 .navbar #logo-name{
@@ -21,7 +24,7 @@ nav{
 }
 
 /* align to right */
-.navbar #link, .navbar #github-icon{
+.navbar #link, .navbar #github-icon, .navbar #logout-link{
     float: right;
     text-decoration: none;
     color: #000000;
@@ -32,7 +35,7 @@ nav{
 }
 
 
-#link {
+#link, #logout-link {
     width: auto;
     color: #000000;
     font-family: 'Roboto', sans-serif;
@@ -43,7 +46,7 @@ nav{
 
 
 @media screen and (min-width: 540px) {
-    .navbar #link{
+    .navbar #link {
         display: none;
     }
     .navbar #github-icon{

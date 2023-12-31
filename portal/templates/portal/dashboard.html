@@ -1,0 +1,17 @@
+{% extends "portal/layout.html" %}
+{% load static %}
+
+<!-- title block -->
+{% block title %}
+    Dashboard
+{% endblock %}
+
+<!-- stylesheet block -->
+{% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'portal/css/dashboard.css' %}">
+{% endblock %}
+
+<!-- body block -->
+{% block body %}
+    <h1>Welcome, {{ user.username }}!</h1>
+{% endblock %}
