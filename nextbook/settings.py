@@ -60,7 +60,7 @@ ROOT_URLCONF = "nextbook.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, 'templates')],
+        "DIRS": [],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -87,6 +87,11 @@ DATABASES = {
 }
 
 AUTH_USER_MODEL = "portal.User"
+
+# foreign key constraint handling for custom user model
+# https://docs.djangoproject.com/en/3.2/ref/settings/#std:setting-AUTH_USER_MODEL
+
+# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-user-model
 
 
 # Password validation

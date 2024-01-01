@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.hashers import check_password
 
-from .models import User, Topic
+from .models import User
 
 # Create your views here.
 def index(request):
@@ -74,7 +74,7 @@ def signin(request):
 
 @login_required(login_url='/')
 def dashboard(request):
-        
+
     return render(request, "portal/dashboard.html", {
         "user": request.user,
     })
