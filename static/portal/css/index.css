@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* change selection color */
+::selection {
+    background-color: #1b1a1a;
+    color: #ffffff;
+}
+
+body{
+    background-image: url('images/background4.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-color: rgba(255,255,255,0.9);
+    background-blend-mode: lighten;
+
+    overflow-x: hidden;
+}
+
+.hero{
+    width: 100%;
+    margin: 50px 0px 0px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #373232;
+}
+
+.signup-signin-container {
+    max-width: 100%;
+    padding: 10px 20px 20px 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup, .signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup {
+    border-right: 2px solid #797878e5;
+}
+
+.signin{
+    align-self: flex-start;
+}
+
+.left {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.right {
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+
+.signin-title, .signup-title {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-title h1, .signin-title h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #373232;
+    margin-bottom: 10px;
+}
+
+.signup-form, .signin-form {
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+}
+
+.form-input-field {
+    width: 100%;
+    min-width: 250px;
+    margin: 5px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.password-input-container {
+    width: 100%;
+    position: relative;
+}
+
+#togglePassword, #toggleConfirmPassword, #toggleLoginPassword {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 5px;
+}
+
+
+.form-input-text {
+    width: 60%;
+    padding: 10px;
+    margin: 5px 0;
+    
+    border-right: 1px solid #393636;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 1px solid #393636;
+
+    border-radius: 1px;
+    box-sizing: border-box;
+    background-color: #ffffff22;
+}
+
+.password-input-text {
+    width: 100%;
+}
+
+.password-input-container {
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.form-input-text:hover {
+    background-color: #fafafa70;
+}
+
+.form-input-text:focus {
+    background-color: #f5f5f5ee;
+    outline: none;
+}
+
+.form-input-text::placeholder {
+    color: #1e1c1c;
+    font: 14px 'Roboto', sans-serif;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    color: #fff;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn {
+    width: auto;
+    padding: 10px;
+    margin: 5px 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff0d;
+    border: none;
+
+    font: 16px 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.submit-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #393636;
+    transform-origin: bottom right;
+    transition: transform 0.15s cubic-bezier(0, 0, 1, 1);
+}
+
+.submit-btn:hover, .submit-btn:focus, .submit-btn:active {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.submit-btn:hover::after, .submit-btn:focus::after, .submit-btn:active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#link {
+    width: auto;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 5px
+}
+
+#form-footer-text {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+
+@media screen and (max-width: 540px) {
+
+    body {
+        background-repeat: repeat;
+        background-position:bottom;
+    }
+
+    .hero {
+        margin-top: 100px;
+    }
+
+    .hero-text {
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .signup-signin-container {
+        max-width: 100%;
+        margin: 0px;
+        flex-direction: column-reverse;
+    }
+
+    .signup, .signin {
+        height: 95vh;
+        max-height: 70vh;
+        max-width: 100%;
+        border-right: none;
+    }
+
+    .signin {
+        align-self: center;
+        margin-top: -50px;
+    }
+
+    .signup {
+        margin-bottom: 60px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    #form-footer-text {
+        display: none;
+    }
+}
