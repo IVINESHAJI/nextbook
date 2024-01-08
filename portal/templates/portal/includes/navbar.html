@@ -6,12 +6,13 @@
 
         {% if user.is_authenticated %}
             <a href="{% url 'signout' %}" id="logout-link">Logout</a>
+            <a href="{% url 'profile' %}" id="logout-link">Profile</a>
         {% else %}
             <a href="{% url 'index' %}#signup" id="link">Register</a>
         {% endif %}
         
         <a href="https://github.com/vijay-varadarajan/nextbook" id="github-icon"><i class="fa fa-github fa-lg" style="color: #000000;"></i></a>
         
-        </div>
+    </div>
 </nav>
 <script src="{% static 'portal/js/includes/navbar.js' %}"></script>

@@ -1,0 +1,50 @@
+{% extends "portal/layout.html" %}
+{% load static %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'portal/css/profile.css' %}">
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="profile">
+        
+            <form action="/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="profile__image">
+                    <img src="{{ user.profilepic.url }}" alt="Profile Image" width="150px">
+                </div>
+                <div class="profile__image__upload">
+                    <label for="profilepic">Profile Picture</label><input type="file" name="profilepic">
+                </div>
+                <div class="profile__details__name">
+                    <label for="username">Name</label><input type="text" name="username" value="{{ user.username }}" placeholder="Username">
+                </div>
+                <div class="profile__details__email">
+                    <label for="email">Email</label><input type="email" name="email" value="{{ user.email }}" placeholder="Email">
+                </div>
+                <div class="profile__details__bio">
+                    <label for="bio">Bio</label>
+                    <p><textarea name="bio" placeholder="Tell us about yourself">{{ user.bio }}</textarea></p>
+                </div>
+                {% if user.interested_topics %}
+                <div class="profile__details__topics">
+                    <h3>Interests</h3>
+                    <ul>
+                        {% for topic in user.interested_topics.all %}
+                        <li>{{ topic }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                <button type="submit" class="submit-btn">Update</button>
+            </form>
+
+    </div>
+
+{% endblock %}

@@ -80,6 +80,14 @@ def dashboard(request):
     })
 
 
+@login_required(login_url='/')
+def profile(request):
+    
+    return render(request, "portal/profile.html", {
+        "user": request.user,
+    })
+
+
 def signout(request):
     logout(request)
     return HttpResponseRedirect(reverse("index"))
